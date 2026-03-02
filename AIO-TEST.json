@@ -1,0 +1,552 @@
+{
+  "uuid": "29dbbb55-8c67-4113-aed2-3469a89d492d",
+  "trusted": false,
+  "addonName": "AIO|PL|MAX|STABLE|2026",
+  "excludedResolutions": [
+    "144p",
+    "240p",
+    "360p"
+  ],
+  "includedResolutions": [],
+  "requiredResolutions": [],
+  "preferredResolutions": [
+    "2160p",
+    "1440p",
+    "1080p",
+    "720p",
+    "Unknown"
+  ],
+  "excludedQualities": [
+    "SCR",
+    "TC",
+    "TS",
+    "CAM"
+  ],
+  "includedQualities": [],
+  "requiredQualities": [],
+  "preferredQualities": [
+    "BluRay REMUX",
+    "BluRay",
+    "WEB-DL",
+    "WEBRip",
+    "HDRip",
+    "DVDRip",
+    "HDTV",
+    "Unknown"
+  ],
+  "excludedLanguages": [],
+  "includedLanguages": [],
+  "requiredLanguages": [],
+  "preferredLanguages": [
+    "Polish"
+  ],
+  "excludedVisualTags": [
+    "3D"
+  ],
+  "preferredVisualTags": [],
+  "preferredAudioTags": [],
+  "excludedStreamTypes": [],
+  "includedStreamTypes": [],
+  "requiredStreamTypes": [],
+  "preferredStreamTypes": [],
+  "excludedEncodes": [],
+  "includedEncodes": [],
+  "requiredEncodes": [],
+  "preferredEncodes": [],
+  "preferredRegexPatterns": [
+    {
+      "name": "pol1_groups_enhanced",
+      "pattern": "(?i)\\b(A(FO|4O|NONiM|S76|ZQ)|AdL|alE13|Alusia|azjatycki|B(P007|ODZiO|89|i(DA|RD)|RX)|C(AMBiO|HOPiN|hrisVPS|iNEMAET|oLO|RU)|D(ReaM|ENDA|eiX|SiTE|ZiDEK)|d(11|evil-bad)|E(MiS|nTeR1973|speranza|Team)|e(end|lladajarek)|F(eld|ileTracker|PL|LAME)|G(amer158|hN|HW|R4PE|UN)|H(3Q|MDb|EN|T)|Izyk|inTGrity|J(60|25)|joanna668|K(12|37|83|8|041|buso|DE|i(lKr|T|KO)|LiO|PFR|RT|SQ|S)|L(iMiT|EX|LO|T(N|S)|ysol1)|M(ORS|AXX|AXiM|56|80|ixio|iNS|R)|m(aksim80|arjos83)|N(itroTeam|EO|INE|N|0(B0DY|L4)|o(NaNo|Q)|AsP)|O(DiSON|zW)|P(dlG|S(iG|OTNIK)|iratesZone|TRG)|presa|R(22|68|alf|obSil|X)|raven|S(56|K13|nOoP|pedboy|tarLordX|tarLord|YRIX|_S)|s(pajk85|av|y5ka)|ToP2P|taboon1|wasik|wosiu|WiZARDS|X(uploaD|TE)|Z(et|T|_S)|zyl|-(FT|OK)|ALLiANCE|V98|KSQ|H264-FELD|REMUKS\\.PL|ATMOS\\.PL)\\b"
+    },
+    {
+      "name": "pol2_torrent_sites_enhanced",
+      "pattern": "(?i)\\b(3d11|a(gusiq|l3x)|b(est-torrents|igbbs)|cool-torents|d(abrjarek|evil-torrents|ubbpl)|e(lectro-torrent|x-torrenty)|fiona9|kolekcja|lektor(pl)?|m(arcin0313|miniserial)|n(api(project|sy(pl)?)|icollubin)|odc(inek)?|p(2p|aczka|ixi|l(?:_1080p_web|dub|sub(?:bed)?)?|ol(?:ish|ski(?:e-torrenty|pl)?)?)|rekonstrukcja|s(ezon|fpi|hadows-torrents|harpe|uperseed|yntezator)|t(ds|fsh|oalien|opfilmyfilmweb|orrent(maniak|y))|vantablack|w(ersja|ilu(75)?)|xtorrenty|zbyszek)\\b|Rip\\s+by\\s+RaptCat|ekipa\\s+tnt|[ąćęłńśźż]"
+    },
+    {
+      "name": "PL_AUDIO_STRICT",
+      "pattern": "(?i)\\b(polish|polski|lektor|dubbing|pl\\.|\\[pl\\]|plsub|pldub)\\b"
+    },
+    {
+      "name": "polish_streaming",
+      "pattern": "(?i)\\b(cda|napisy24|pl\\.subs|polskie|lektor|dubbing|polski)\\b"
+    },
+    {
+      "name": "PL_FORMATS_NEW",
+      "pattern": "(?i)\\b(REMUX|ATMOS|H264-FELD|UHD|BluRay\\s+REMUX)\\b|REMUKS\\.PL|ATMOS\\.PL"
+    }
+  ],
+  "ageRangeTypes": [
+    "usenet"
+  ],
+  "digitalReleaseFilter": {
+    "enabled": false,
+    "tolerance": 0,
+    "requestTypes": [],
+    "addons": []
+  },
+  "enableSeadex": true,
+  "excludeCachedFromAddons": [],
+  "excludeCachedFromServices": [],
+  "excludeCachedFromStreamTypes": [],
+  "excludeUncachedFromAddons": [],
+  "excludeUncachedFromServices": [],
+  "excludeUncachedFromStreamTypes": [],
+  "preferredStreamExpressions": [
+    {
+      "expression": "merge(regexMatched(streams, 'pol1_groups_enhanced'), regexMatched(streams, 'pol2_torrent_sites_enhanced'), regexMatched(streams, 'PL_AUDIO_STRICT'), regexMatched(streams, 'polish_streaming'), regexMatched(streams, 'PL_FORMATS_NEW'), language(streams, 'Polish'))",
+      "enabled": true
+    }
+  ],
+  "regexOverrides": [],
+  "dynamicAddonFetching": {
+    "enabled": true,
+    "condition": "(totalTimeTaken > 3000 and totalStreams > 10) or totalTimeTaken > 7000"
+  },
+  "groups": {
+    "enabled": false
+  },
+  "sortCriteria": {
+    "global": [
+      {
+        "key": "streamExpressionMatched",
+        "direction": "desc"
+      },
+      {
+        "key": "cached",
+        "direction": "desc"
+      },
+      {
+        "key": "resolution",
+        "direction": "desc"
+      }
+    ]
+  },
+  "posterService": "rpdb",
+  "formatter": {
+    "id": "custom",
+    "definition": {
+      "name": "{stream.regexMatched::exists::or::stream.languages::~Polish[\"🇵🇱 \"||\"\"]}{service.shortName::exists[\"[{service.shortName}]\"||\"\"]}{service.cached::istrue[\"⚡️]\"||\"\"]}{service.cached::isfalse[\"⬇️]\"||\"\"]} {addon.name} {stream.resolution::exists[\"{stream.resolution::replace('2160p', '4K')}\"||\"\"]}{stream.visualTags::exists[\" 📺 {stream.visualTags::join(' | ')}\"||\"\"]}",
+      "description": "{service.cached::istrue::and::stream.library::istrue[\"☁️\"||\"\"]}{stream.filename::exists[\"{stream.filename}\"||\"\"]}\n{stream.indexer::exists[\"🔍 {stream.indexer}\"||\"\"]}\n{stream.quality::exists[\"🎥 {stream.quality} \"||\"\"]}{stream.encode::exists[\"🎞️ {stream.encode} \"||\"\"]}\n{stream.audioTags::exists[\"🎧 {stream.audioTags::join(' | ')} \"||\"\"]}{stream.audioChannels::exists[\"🔊 {stream.audioChannels::join(' | ')}\"||\"\"]}\n{stream.size::>0[\"📦 {stream.size::bytes} \"||\"\"]}{stream.folderSize::>0[\"/ 📦 {stream.folderSize::bytes}\"||\"\"]}{stream.age::exists[\"📅 {stream.age} \"||\"\"]}{stream.duration::>0[\"⏱️ {stream.duration::time} \"||\"\"]}{stream.seeders::>0[\"🌱 {stream.seeders} \"||\"\"]}\n{stream.languages::exists[\"🗣️ {stream.languageEmojis::join(' | ')}\"||\"\"]}\n{stream.message::exists[\"ℹ️ {stream.message}\"||\"\"]}"
+    }
+  },
+  "proxy": {},
+  "hideErrorsForResources": [],
+  "statistics": {
+    "enabled": false,
+    "position": "bottom",
+    "statsToShow": [
+      "addon",
+      "filter"
+    ]
+  },
+  "tmdbAccessToken": "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMjk1MWYyZWQ3MzUwYTliZGE1MjAzMzRjYTc2YjY0NyIsIm5iZiI6MTc2NzMzMzE2Ni4xNjMsInN1YiI6IjY5NTc1ZDJlZWExYzczMTIwMmQ3OTQwNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ",
+  "tmdbApiKey": "02951f2ed7350a9bda520334ca76b647",
+  "tvdbApiKey": "43fce555-aeba-4d6c-8be3-b9a093f7b6f2",
+  "yearMatching": {
+    "requestTypes": [],
+    "addons": []
+  },
+  "titleMatching": {
+    "requestTypes": [],
+    "addons": []
+  },
+  "seasonEpisodeMatching": {
+    "requestTypes": [],
+    "addons": []
+  },
+  "deduplicator": {
+    "enabled": true,
+    "excludeAddons": [],
+    "multiGroupBehaviour": "aggressive",
+    "keys": [
+      "infoHash"
+    ],
+    "cached": "single_result"
+  },
+  "autoPlay": {
+    "enabled": true,
+    "method": "matchingFile",
+    "attributes": [
+      "resolution",
+      "quality",
+      "releaseGroup"
+    ]
+  },
+  "precacheSelector": "count(cached(streams)) == 0 ? uncached(streams) : []",
+  "services": [
+    {
+      "id": "realdebrid",
+      "enabled": true,
+      "credentials": {
+        "apiKey": "MJI2IL4NACAUN43FPD5ESJHGXMO45FDUXRC2P6Z5A7KXVS5OXD4Q"
+      }
+    },
+    {
+      "id": "alldebrid",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "premiumize",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "debridlink",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "torbox",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "stremio_nntp",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "nzbdav",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "altmount",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "offcloud",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "putio",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "easynews",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "easydebrid",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "debrider",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "pikpak",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "seedr",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "stremthru_newz",
+      "enabled": false,
+      "credentials": {}
+    }
+  ],
+  "presets": [
+    {
+      "type": "torrentio",
+      "instanceId": "3d9",
+      "enabled": true,
+      "options": {
+        "name": "BestTorrents",
+        "providers": [
+          "besttorrents"
+        ],
+        "timeout": 15000,
+        "useMultipleInstances": false
+      }
+    },
+    {
+      "type": "torrentio",
+      "instanceId": "b99",
+      "enabled": true,
+      "options": {
+        "name": "Torrentio",
+        "providers": [
+          "cinecalidad",
+          "wolfmax4k",
+          "mejortorrent",
+          "ilcorsaronero",
+          "torrent9",
+          "bludv",
+          "rutracker",
+          "rutor",
+          "magnetdl",
+          "torrentgalaxy",
+          "kickasstorrents",
+          "thepiratebay",
+          "1337x",
+          "rarbg",
+          "yts"
+        ],
+        "timeout": 15000,
+        "useMultipleInstances": false
+      }
+    },
+    {
+      "type": "zilean",
+      "instanceId": "847",
+      "enabled": true,
+      "options": {
+        "name": "Zilean",
+        "timeout": 15000,
+        "url": "https://zilean.048057.xyz/",
+        "useMultipleInstances": false
+      }
+    },
+    {
+      "type": "zilean",
+      "instanceId": "a06",
+      "enabled": true,
+      "options": {
+        "name": "Zilean|atbp",
+        "timeout": 15000,
+        "useMultipleInstances": false
+      }
+    },
+    {
+      "type": "stremthruStore",
+      "instanceId": "76c",
+      "enabled": true,
+      "options": {
+        "name": "ST Store",
+        "timeout": 15000,
+        "webDl": true
+      }
+    },
+    {
+      "type": "peerflix",
+      "instanceId": "926",
+      "enabled": true,
+      "options": {
+        "name": "Peerflix",
+        "timeout": 15000,
+        "useMultipleInstances": false,
+        "showTorrentLinks": false
+      }
+    },
+    {
+      "type": "comet",
+      "instanceId": "651",
+      "enabled": true,
+      "options": {
+        "name": "Comet|atbp",
+        "timeout": 15000
+      }
+    },
+    {
+      "type": "comet",
+      "instanceId": "ac4",
+      "enabled": true,
+      "options": {
+        "name": "Comet|midn",
+        "url": "https://cometfortheweebs.midnightignite.me",
+        "timeout": 15000
+      }
+    },
+    {
+      "type": "comet",
+      "instanceId": "d11",
+      "enabled": true,
+      "options": {
+        "name": "Comet|eh",
+        "url": "https://comet.elfhosted.com/",
+        "timeout": 15000
+      }
+    },
+    {
+      "type": "mediafusion",
+      "instanceId": "cce",
+      "enabled": true,
+      "options": {
+        "name": "MF|atbp",
+        "timeout": 15000,
+        "useCachedResultsOnly": true,
+        "resources": [
+          "stream"
+        ]
+      }
+    },
+    {
+      "type": "mediafusion",
+      "instanceId": "683",
+      "enabled": true,
+      "options": {
+        "name": "MF|midn",
+        "url": "https://mediafusionfortheweebs.midnightignite.me/",
+        "timeout": 15000,
+        "useCachedResultsOnly": true,
+        "resources": [
+          "stream"
+        ]
+      }
+    },
+    {
+      "type": "mediafusion",
+      "instanceId": "060",
+      "enabled": true,
+      "options": {
+        "name": "MF|eh",
+        "url": "https://mediafusion.elfhosted.com/",
+        "timeout": 15000,
+        "useCachedResultsOnly": true,
+        "resources": [
+          "stream"
+        ]
+      }
+    },
+    {
+      "type": "sootio",
+      "instanceId": "118",
+      "enabled": true,
+      "options": {
+        "name": "Sootio",
+        "timeout": 15000
+      }
+    },
+    {
+      "type": "stremthruTorz",
+      "instanceId": "29e",
+      "enabled": true,
+      "options": {
+        "name": "ST Torz",
+        "timeout": 15000,
+        "useMultipleInstances": false
+      }
+    },
+    {
+      "type": "torrents-db",
+      "instanceId": "53f",
+      "enabled": true,
+      "options": {
+        "name": "TorrentsDB",
+        "timeout": 15000,
+        "useMultipleInstances": false
+      }
+    },
+    {
+      "type": "knaben",
+      "instanceId": "61d",
+      "enabled": true,
+      "options": {
+        "name": "Knaben",
+        "timeout": 15000,
+        "useMultipleInstances": false
+      }
+    },
+    {
+      "type": "torrent-galaxy",
+      "instanceId": "639",
+      "enabled": true,
+      "options": {
+        "name": "TorrentGalaxy",
+        "timeout": 15000,
+        "useMultipleInstances": false
+      }
+    },
+    {
+      "type": "meteor",
+      "instanceId": "739",
+      "enabled": true,
+      "options": {
+        "name": "Meteor",
+        "timeout": 15000,
+        "resources": [
+          "stream"
+        ],
+        "includeP2P": true,
+        "removeTrash": true,
+        "useMultipleInstances": false,
+        "mediaTypes": [
+          "movie",
+          "series",
+          "anime"
+        ]
+      }
+    },
+    {
+      "type": "webstreamr",
+      "instanceId": "730",
+      "enabled": true,
+      "options": {
+        "name": "WebStreamr",
+        "timeout": 15000,
+        "resources": [
+          "stream"
+        ],
+        "mediaTypes": [
+          "movie",
+          "series",
+          "anime"
+        ],
+        "providers": [
+          "multi"
+        ],
+        "includeExternalUrls": true,
+        "showErrors": false
+      }
+    }
+  ],
+  "catalogModifications": [
+    {
+      "id": "1184414.realdebrid-downloads",
+      "type": "movie",
+      "name": "RealDebrid Downloads",
+      "shuffle": false,
+      "enabled": false,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Sootio"
+    },
+    {
+      "id": "1184414.realdebrid-downloads",
+      "type": "series",
+      "name": "RealDebrid Downloads",
+      "shuffle": false,
+      "enabled": false,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": false,
+      "addonName": "Sootio"
+    },
+    {
+      "id": "76c4414.st:store:rd",
+      "type": "other",
+      "name": "Store RD",
+      "shuffle": false,
+      "reverse": false,
+      "onlyOnDiscover": false,
+      "enabled": false,
+      "usePosterService": false,
+      "hideable": true,
+      "searchable": true,
+      "addonName": "ST Store"
+    }
+  ],
+  "cacheAndPlay": {
+    "enabled": false,
+    "streamTypes": [
+      "usenet"
+    ]
+  },
+  "checkOwned": true,
+  "serviceWrap": {
+    "enabled": true
+  }
+}
